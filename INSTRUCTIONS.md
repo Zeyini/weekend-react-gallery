@@ -5,14 +5,14 @@ Before you get started make sure to look through the code that has been provided
 ## Get Setup:
 
 You'll need to:
-* `npm install` to install the dependencies specified by `package.json`.
-* Use Postico to create a new database named `react-gallery`.
-* Run the SQL queries found in `database.sql` in order to:
+*   ✅`npm install` to install the dependencies specified by `package.json`.
+* ✅ Use Postico to create a new database named `react-gallery`.
+* ✅ Run the SQL queries found in `database.sql` in order to:
   * Create the `gallery` table.
   * Seed the `gallery` table with one example gallery item.
-* Run `npm run server` to start the Express server with `nodemon`.
-* Run `npm run client` to start the React app.
-* Run `npm test` to verify that the automated test suite runs. You should see something like this:
+*  ✅ Run `npm run server` to start the Express server with `nodemon`.
+*  ✅ Run `npm run client` to start the React app.
+*  ✅ Run `npm test` to verify that the automated test suite runs. You should see something like this:
   * <img src="instructions_images/test-run.png" width="400px">
 
 ### Add Your Own Seed Data:
@@ -41,9 +41,9 @@ Users should be able to:
 
 ### Required Architecture:
 
-To practice passing values as `props` in React, you must build your gallery app using multiple components: `App`, `GalleryList`, and `GalleryItem`.
+✅To practice passing values as `props` in React, you must build your gallery app using multiple components: `App`, `GalleryList`, and `GalleryItem`.
 
-* `App`: Represents the overall application or site.
+* ✅`App`: Represents the overall application or site.
   * The App must have a `data-testid="app"` attribute
       * **DO NOT DO THIS**:
           * ```jsx

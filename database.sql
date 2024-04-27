@@ -7,8 +7,7 @@ CREATE TABLE "gallery" (
 );
 
 INSERT INTO "gallery" 
-("url", "title", "description")
+("url", "title", "description","likes")
 VALUES
-('images/goat_small.jpg', 'Goat!', 'Photo of a goat taken at Glacier National Park.'),
-('images/goat_stache.png', 'Goat Stache!', 'Photo of a mustachioed goat taken at Glacier National Park.');
-  
+('images/goat_small.jpg', 'Goat!', 'Photo of a goat taken at Glacier National Park.',0),
+('images/goat_stache.png', 'Goat Stache!', 'Photo of a mustachioed goat taken at Glacier National Park.',0);
