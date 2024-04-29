@@ -2,13 +2,30 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './app.css';
 
+// this function needs the item variable and the fetchgallery defined in the galleryList
 
-
-function GalleryItem({ item }) {
+function GalleryItem({item,fetchgallery}) {
 
 {console.log(item)}
 
+const addOne = () => {
+
+    console.log("click count");
+    
+    axios.put(`/api/gallery/${item.id}`)
+      .then(() => {
+        fetchgallery();
+      })
+      .catch(error => {
+        console.log('Error liking image:', error);
+      });
+  };
+
+
+
+// toggl image state logic 
 const [imageDisplay, setimageDisplay] = useState(true);
+
     const toggleImage = (id) => {
       if (imageDisplay === false) {
         setimageDisplay(true)
@@ -39,7 +56,7 @@ const [imageDisplay, setimageDisplay] = useState(true);
       
     
       <div>
-        <button data-testid="like" className="button">Love it</button>
+        <button data-testid="like" onClick={addOne}>Love it</button>
       </div>
     </div>
   );

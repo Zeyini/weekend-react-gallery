@@ -3,8 +3,19 @@ const router = express.Router();
 const pool = require('../modules/pool.js'); // requring the pool file to access DB
 
 // PUT /gallery/like/:id
-router.put('/like/:id', (req, res) => {
-  // code here
+router.put('/:id', (req, res) => {
+  const sqlText = 'UPDATE gallery SET likes = likes + 1 WHERE id = $1';
+  const sqlIDValue = req.params.id;
+  pool.query(sqlText, [sqlIDValue])
+
+  .then(() => {
+    res.sendStatus(200);
+  })
+  .catch(error => {
+    console.error('Error counting db:', error);
+    res.sendStatus(500);
+  });
+
 });
 
 
