@@ -1,42 +1,53 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+import './app.css';
 
 
 
-function GalleryItem (galleryArray) {
+function GalleryItem({ item }) {
+
+{console.log(item)}
+
+const [imageDisplay, setimageDisplay] = useState(true);
+    const toggleImage = (id) => {
+      if (imageDisplay === false) {
+        setimageDisplay(true)
+      } else {
+        setimageDisplay(false)
+      }
+      console.log(`Div with ID ${id} clicked`);
+
+    }
 
 
+
+  return (
+    <div data-testid="galleryItem"> 
+      <div >{item.item}</div>
+      <p>{item.title}</p>
+
+      {console.log(item)}
+
+          <span data-testid="toggle" onClick={toggleImage} className="listContainer" >
+              {imageDisplay ?
+                  <img src={item.url} alt={item.title}  />
+                  :
+                  <p> {item.description}</p>
+              }
+                <div>{item.likes} People love this!</div>
+          </span>
+      
+    
+      <div>
+        <button data-testid="like" className="button">Love it</button>
+      </div>
+    </div>
+  );
 }
 
 
 
 
-
-
-
-
-//get each item and update image state
-//need to to access one photo from the array to
-
-// function GalleryItem ({onePhoto,fetchgallery}){
-
-
-//     // code in ternaries: setimageDisplay = imageDisplay === false ? true : false
-//     // setting the state of when the button is clicked with the function
-//     const [imageDisplay, setimageDisplay] = useState(false)
-
-//     const toggleImage = (id) => {
-//       if (imageDisplay === false) {
-//         setimageDisplay(true)
-//       } else {
-//         setimageDisplay(false)
-//       }
-//       console.log(`Div with ID ${id} clicked`);
-
-//     }
-
-//     return (
-        
-//     )
-// }
 
 
 export default GalleryItem;

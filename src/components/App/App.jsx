@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './app.css';
+// import './app.css';
 import GalleryList from '../GalleryList'
-import GalleryItem from '../GalleryItem'
+
 
 
 function App() {
@@ -38,12 +38,6 @@ function App() {
 
 
 
-
-
-
-
-
-
     return (
       <div data-testid="app" >
         <header>
@@ -55,7 +49,7 @@ function App() {
         <img src="images/goat_stache.png"/> */}
 
       <GalleryList  galleryArray={galleryArray} />
-      <GalleryItem   galleryArray={galleryArray}/>
+      
 
 
 

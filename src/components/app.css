@@ -1,0 +1,34 @@
+main {
+    width: 90%;
+    margin: auto;
+  }
+  
+  body {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 20px 0;
+    background-color: pink; /* Set pink background color */
+    width:200px;
+    height: 200px;
+    padding: 20px;
+    align-content: center;
+    border: solid blue;
+  }
+  
+  
+
+  .image {
+    width:200px; 
+    height: 99px; 
+    size-adjust: 9000px;
+  }
+
+  .green {
+    background-color: blue;
+  }
