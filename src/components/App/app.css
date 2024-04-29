@@ -21,10 +21,15 @@ main {
     border-radius: 40px;
     padding: 20px;
     min-width: 160px;
+   
     
   }
 
   .image {
     width: 200px; /* Set the width of the image */
     height: auto; /* Maintain the aspect ratio */
+  }
+
+  .green {
+    background-color: blue;
   }
